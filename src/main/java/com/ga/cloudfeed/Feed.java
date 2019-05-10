@@ -1,9 +1,5 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
+package com.ga.cloudfeed;
 
-package com.ga.backend;
 
 import com.google.firebase.internal.NonNull;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -100,6 +96,7 @@ public class Feed {
     }
 
     private void sendRequest(String method) {
+
         if (this.websub != null) {
             try {
                 String call = "hub.mode=" + method + "&hub.verify=sync&hub.topic=" + this.url + "&hub.callback=" + Servlet.url + "websub?encoded=" + this.getEncodedGson();
